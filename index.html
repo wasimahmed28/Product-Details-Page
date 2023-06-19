@@ -1,0 +1,85 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <a href="#"  class="logo" onclick="location.reload(); return false;">Product Details Page</a> 
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <i class="fas fa-shopping-cart" style="color: #FDFDFD;"></i>
+        </ul>
+    </nav>
+
+    <div class="flex-box">
+        <div class="left">
+            <div class="big-img">
+                <img src="img/p8.jpg">
+            </div>
+            <div class="images">
+                <div class="small-img">
+                    <img src="img/p8.jpg" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="img/p7.webp" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="img/p6.webp" onclick="showImg(this.src)">
+                </div>
+                <div class="small-img">
+                    <img src="img/p5.webp" onclick="showImg(this.src)">
+                </div>
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="url">Home > Product ><span style="color: ff5e00;"> Dog Food </span></div>
+            <div class="pname">Pedigree Chicken Flavour Biscrok Biscuits Dog Treats (500g)</div>
+            <div class="ratings">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="price">₹190
+            </div>
+            <div class="size">
+                <p>Size :</p>
+                <div class="psize active">500 g</div>
+                <div class="psize">1 KG</div>
+                <div class="psize">2 KG</div>
+                <div class="psize">5 KG</div>
+            </div>
+            <div class="quantity">
+                <p>Quantity :</p>
+                <input type="number" min="1" max="5" value="1">
+            </div>
+            <div class="btn-box">
+                <button id="upload-btn" onclick="openPopup()" class="cart-btn">UPLOAD DATA </button>
+                 <div id="popup-overlay" class="popup-overlay">
+    <div id="popup-content" class="popup-content">
+      <h3>Upload Your Details</h3>
+      <form id="user-details-form" onsubmit="submitForm(event)">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="address">Address:</label>
+        <textarea id="address" required></textarea>
+        <button class="cart-btn" id="submit" type="submit" onclick="change()" >Submit</button>
+      </form>
+    </div>
+  </div>
+            </div>
+        </div>
+    </div>
+<script src="./script.js"></script>
+</body>
+</html>
